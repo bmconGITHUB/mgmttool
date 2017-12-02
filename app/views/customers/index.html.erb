@@ -31,8 +31,8 @@
         <td><%= customer.phone %></td>
         <td><%= customer.email %></td>
         <td class="edit"><%= link_to 'Show', customer %></td>
-        <td class="edit"><%= link_to 'Edit', edit_customer_path(customer) %></td>
         <% if current_user.admin? %>
+        <td class="edit"><%= link_to 'Edit', edit_customer_path(customer) %></td>
         <td class="edit"><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
       </tr>
