@@ -19,11 +19,15 @@
     </thead>
     </table>  
     <%= form.label :customer_id, 'Customer ID' %>
-    <%= @customer.id %><br>      
+    <%= @customer.id %><br>
       
+    <%= form.label :name, 'Customer ID' %>
+    <%= @customer.name %><br>  
+    
+    <% if current_user.admin? %>  
     <%= form.label :name %>
     <%= form.text_field :name %><br>
-
+    <% end %>
     <%= form.label :contact %>
     <%= form.text_field :contact %><br>
 

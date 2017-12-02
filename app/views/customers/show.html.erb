@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Back', @customers %> |
+
 <% if current_user.admin? %>
 <%= link_to 'Sites', customer_sites_path(@customer) %> |
-<% end %>
 <a href="/users/sign_up">New User</a>
+<% end %>
 <br>
 
 <%= render 'form_edit' %>
