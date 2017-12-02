@@ -1,0 +1,39 @@
+<%= form_for(@site) do |form| %>
+  <% if @site.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@site.errors.count, "error") %> prohibited this site from being saved:</h2>
+
+      <ul>
+      <% @site.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :site_id, 'Site ID' %>
+    <%= @site.id %><br>
+
+    <%= form.label :name %>
+    <%= form.text_field :name %><br>
+
+    <%= form.label :address %>
+    <%= form.text_field :address %><br>
+
+    <%= form.label :contact %>
+    <%= form.text_field :contact %><br>
+
+    <%= form.label :phone %>
+    <%= form.text_field :phone %><br>
+
+    <%= form.label :email %>
+    <%= form.text_field :email %><br>
+
+    <%= form.label :customer_id, 'Customer ID' %>
+    <%= @site.customer_id %><br>
+
+    <%= form.submit %>
+
+  </div>
+<% end %>

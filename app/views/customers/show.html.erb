@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Back', @customers %> |
+<% if current_user.admin? %>
+<%= link_to 'Sites', customer_sites_path(@customer) %> |
+<% end %>
+<a href="/users/sign_up">New User</a>
+<br>
+
+<%= render 'form_edit' %>
+
+<div class="right", style="overflow-x:auto;">
+<table>
+  <thead>
+    <th colspan="9">Site Details</th>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Contact</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th colspan="3">Select</th>
+    </tr>
+  </thead>
+<% @customer.sites.each do |site| %>
+<tbody>
+      <tr>
+        <td><%= site.id %></td>
+        <td><%= site.name %></td>
+        <td><%= site.address %></td>
+        <td><%= site.contact %></td>
+        <td><%= site.phone %></td>
+        <td><%= site.email %></td>
+        <td class="edit"><%= link_to 'Show', customer_site_path(@customer, site) %></td>
+        <td class="edit"><%= link_to 'Edit', edit_customer_site_path(@customer, site) %></td>     
+        <td class="edit"><%= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<% end %>
+      </tr>
+  </tbody>
+</table>
+
+<%= form_for([@customer, @customer.sites.build], local: true) do |form| %>
+
+    <%= form.submit 'Add a Site'%>
+
+<% end %>
+</div>

@@ -1,0 +1,155 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* Application----------------------------------------------------------------*/
+div{
+    width: 48%;
+    float: left;
+    padding: 1em;
+    border:1px solid black;
+}
+
+.right{
+    float: right;
+}
+
+a[href]{
+    color: black;
+    background-color: #d9d9d9;
+    border-radius: 3px;
+    border:1px solid black;
+    padding: 1px;
+    text-decoration:  none;
+}
+
+a[href]:hover {
+    color: white;
+    background-color: black;
+}
+  
+/* Tables---------------------------------------------------------------------*/
+.item{
+    text-align:center;
+    font-size: 13px;
+    background:#00308f;
+    color:#fff;
+}
+
+.edit{
+    background-color: #f1f1f1;
+    color: #333;
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 13px;
+}
+
+table{
+   	width: 100%;
+}
+
+table tr td {
+    text-align:center;
+    border:2px solid #B4C1FF;   
+    padding: 1px;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+thead{
+    text-align:center;
+    font-size: 13px;
+    background:#00308f;
+    color:#fff;
+    border:2px solid #B4C1FF;
+}
+
+thead th{
+    padding:1px;
+    border:2px solid #B4C1FF;
+}
+
+/*Forms-----------------------------------------------------------------------*/
+
+form {
+    display: block;
+}
+
+input {
+    width: 78%;
+    padding: 1px;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+input[type=text] {
+    border:2px solid #B4C1FF;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+
+input[type=submit] {
+    width: 20%;
+    color: black;
+    background-color: #d9d9d9;
+    border-radius: 3px;
+    border:1px solid black;
+    padding: 1px;
+}
+
+input[type=submit]:hover {
+    color: white;
+    background-color: black;
+}
+input[type=checkbox]{
+    width: 1%;
+}
+
+select {
+    width: 20%;
+    color: black;
+    background-color: #d9d9d9;
+    border-radius: 3px;
+    border:1px solid black;
+    padding: 1px;
+}
+
+select:hover {
+    color: white;
+    background-color: black;
+}
+
+label {
+    width: 20%;
+    border:2px solid #B4C1FF;
+    padding: 1px;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align:center;
+    background:#00308f;
+    color:#fff;
+}
+
+#error_explanation{
+    padding: none;
+    margin: none;
+    width: 100%;
+}
+
+.field_with_errors{
+    width: 100%;
+}
