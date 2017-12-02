@@ -35,6 +35,8 @@
         <td><%= site.phone %></td>
         <td><%= site.email %></td>
         <td class="edit"><%= link_to 'Show', site %></td>
+        <td class="edit"><%= link_to 'Edit', edit_site_path(site) %></td>     
+        <td class="edit"><%= link_to 'Destroy', site, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
     <% end %>

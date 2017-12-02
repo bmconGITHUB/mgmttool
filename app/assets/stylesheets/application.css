@@ -19,7 +19,6 @@ div{
     width: 48%;
     float: left;
     padding: 1em;
-    border:1px solid black;
 }
 
 .right{
@@ -152,4 +151,12 @@ label {
 
 .field_with_errors{
     width: 100%;
+}
+/* Footer---------------------------------------------------------------------*/
+#footer {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    font-size: 10px;
+    color: black;
 }
