@@ -8,7 +8,6 @@ class SitesController < ApplicationController
   # GET /customers/:customer_id/sites/:id
   # GET /sites/:id.xml
   def show
-    #customer = Customer.find(params[:customer_id])
     @site = Site.find_by(id: params[:id])
     if @site.nil?
       redirect_to action: :index

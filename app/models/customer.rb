@@ -5,4 +5,8 @@ class Customer < ActiveRecord::Base
     accepts_nested_attributes_for :circuits, :allow_destroy => :true
     
     has_many :users
+    
+    def self.search(search)
+        where("name || id LIKE ?", "%#{search}%") 
+    end
 end

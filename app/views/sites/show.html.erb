@@ -17,7 +17,9 @@
       <th>Carrier</th>
       <th>Carrier Reference</th>
       <th>Site</th>
+      <% if current_user.admin? %>
       <th colspan="3">Select</th>
+      <% end %>
     </tr>
   </thead>
 <% @site.circuits.each do |circuit| %>
@@ -30,9 +32,11 @@
         <td><%= circuit.carrier %></td>
         <td><%= circuit.carrierRef %></td>
         <td><%= circuit.site_id %></td>
+        <% if current_user.admin? %>
         <td class="edit"><%= link_to 'Show', site_circuit_path(@site, circuit) %></td>
         <td class="edit"><%= link_to 'Edit', edit_site_circuit_path(@site, circuit) %></td>     
         <td class="edit"><%= link_to 'Destroy', circuit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
 <% end %>
       </tr>
   </tbody>
